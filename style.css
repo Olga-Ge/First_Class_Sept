@@ -1,7 +1,40 @@
 
-        h1 {
-            color: pink;
-         }
-         h2 {
-            color: orange;
-         }
+h1 {
+  color: red;
+  text-align: center;
+}
+
+h2 {
+  color: black;
+  text-align: center;
+}
+
+body {
+  color: white;
+  background-color: blue;
+  font-family: Arial;
+  text-align: center;
+  font-size: 12px
+}
+input[type=text] {
+  width: 50%;
+  padding: 20px;
+  margin: 10px 0;
+
+}
+input[type=email] {
+  width: 10%;
+  padding: 12px;
+}
+select {
+  width: 100%;
+  padding: 12px;
+}
+input[type=submit] {
+  background-color: red;
+  border: none;
+  color: white;
+  padding: 14px;
+  margin: auto;
+  width: 50%;
+}
