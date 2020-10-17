@@ -1,35 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>Tables</title>
+    <style>
+       table {
+            border: 6px solid blue;
+            border-collapse: collapse;
+            text-align: center;
+            margin: 35px;
+            color: red;
+            font-family: "Arial"
+            }
+
+        td,td {
+            border: 4px solid black;
+            }
+        th,th {
+            border: 4px solid black;
+            }
+         .special {
+            color: blue;
+            border: 4px solid green;
+            }
+        #very-special {
+            color: green;
+            font-family: "Helvetica";
+            }
+        #another {
+            color: pink;
+            font-family: "Lucida Console";
+            }
+    </style>
 </head>
 <body>
     <table>
         <thead>
+            <tr id="very-special">
+                <th>Tier 1 Target</th>
+                <th>Tier 2 Target</th>
+                <th>Total Target</th>
+            </tr>
+        <thead>
+
+        <tbody>
             <tr>
-                <th>Country</th>
-                <th>Capital</th>
-                <th>Language</th>
+                <td>5</td>
+                <td>7</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>DT</td>
+                <td>FC</td>
+                <td>n/a</td>
+            </tr>
+            <tr>
+                <td>Moscow</td>
+                <td>Minsk</td>
+                <td>n/a</td>
+            </tr>
+
+        </tbody>
+    </table>
+    <table id="special">
+        <thead>
+            <tr>
+                <th>Tier 1 Actual</th>
+                <th>Tier 2 Actual</th>
+                <th>Total 2020</th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>0</td>
+                <td>1</td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="special">
+        <thead>
+            <tr id="another">
+                <th>Incentive 1</th>
+                <th>Incentive 2</th>
+                <th>Incentive 3</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>France</td>
-                <td>Paris</td>
-                <td>French</td>
+                <td>IF=0</td>
+                <td>Bonus =200k</td>
+                <td>AMP discount 2%</td>
             </tr>
             <tr>
-                <td>Russia</td>
-                <td>Moscow</td>
-                <td>Russian</td>
-            </tr>
-            <tr>
-                <td>Venezuela</td>
-                <td>Caracas</td>
-                <td>Spanish</td>
+                <td>Renewal Fee =0</td>
+                <td>n/a</td>
+                <td>AMP discount 3% </td>
             </tr>
         </tbody>
     </table>
-</body>
+
 </html>
