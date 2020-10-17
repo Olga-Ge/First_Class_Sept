@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Tables</title>
+    <style>
+       table {
+            border: 6px solid blue;
+            border-collapse: collapse;
+            text-align: center;
+            margin: 35px;
+            color: red;
+            font-family: "Arial"
+            }
+
+        td,td {
+            border: 4px solid black;
+            }
+        th,th {
+            border: 4px solid black;
+            }
+         .special {
+            color: blue;
+            border: 4px solid green;
+            }
+        #very-special {
+            color: green;
+            font-family: "Helvetica";
+            }
+        #another {
+            color: pink;
+            font-family: "Lucida Console";
+            }
+    </style>
+    <script>
+        /*
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelector('#red').onclick = function() {
+                document.querySelector('table').style.color = 'red';
+                document.querySelector('table').style.border = 2px solid black;
+
+             };
+            document.querySelector('#green').onclick = function() {
+                document.querySelector('table').style.color = 'yellow';
+                document.querySelector('table').style.border = 5px solid pink;
+            };
+            document.querySelector('#blue').onclick = function() {
+                document.querySelector('table').style.color = 'pink';
+                document.querySelector('table').style.border = 7px solid yellow;
+            };
+        });
+        */
+        document.addEventListener("DOMContentLoaded", function() {
+            document.querySelectorAll('button').forEach(function(button) {
+                button.onclick = function() {
+                    document.querySelector('table').style.color = button.dataset.color
+                    document.querySelector('table').style.fontSize = button.dataset.size
+                    document.querySelector('table').style.border = button.dataset.border
+                };
+            });
+
+            document.querySelector('select').onchange = function() {
+                document.querySelector('table').style.borderWidth = this.value;
+            };
+        });
+    </script>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr id="very-special">
+                <th>Tier 1 Target</th>
+                <th>Tier 2 Target</th>
+                <th>Total Target</th>
+            </tr>
+        <thead>
+
+        <tbody>
+            <tr>
+                <td>5</td>
+                <td>7</td>
+                <td>12</td>
+            </tr>
+            <tr>
+                <td>DT</td>
+                <td>FC</td>
+                <td>n/a</td>
+            </tr>
+            <tr>
+                <td>Moscow</td>
+                <td>Minsk</td>
+                <td>n/a</td>
+            </tr>
+
+        </tbody>
+    </table>
+
+    <button data-color="green" data-size="10px" id="yellow" data-border="4px solid green">Green</button>
+    <button data-color="red" data-size="20px" id="blue" data-border="3px solid red">Red</button>
+    <button data-color="yellow" data-size="15px" id="red" data-border="5px solid yellow" >Yellow</button>
+
+    <select>
+        <option value="10px">10px</option>
+        <option value="14px">14px</option>
+        <option value="18px">18px</option>
+    </select>
+    </body>
+
+</html>
